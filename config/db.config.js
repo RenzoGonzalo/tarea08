@@ -1,11 +1,10 @@
-// config/db.config.js
 export default {
-  HOST: "host",
-  USER: "renzo",
-  PASSWORD: "123456789",           // Vacío por defecto en XAMPP
-  DB: "07",          // Asegúrate de que esta base de datos exista
-  PORT: 3306,             // ✅ SIN comillas, debe ser número
-  dialect: "mysql",       // ✅ Está bien: Sequelize usa "mysql" también para MariaDB
+  HOST: "dpg-d0hroceuk2gs73891lsg-a",       // Host interno para conexión desde Render
+  USER: "root",                             // Tu usuario
+  PASSWORD: "ZYLftvSaTWj3xIOeDkmx1fAtxR5E9Cz0", // Tu contraseña segura
+  DB: "auth_db_k52s",                       // Nombre exacto de la base de datos
+  PORT: 5432,                               // Puerto estándar para PostgreSQL
+  dialect: "postgres",                      // Dialecto para Sequelize
   pool: {
     max: 5,
     min: 0,
