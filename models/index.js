@@ -1,12 +1,12 @@
 const { Sequelize, DataTypes } = require('sequelize');
-const sequelize = new Sequelize({
-  dialect: 'mysql',
-  host: 'localhost',  // Ajusta estos valores según tu configuración de MySQL
-  username: 'root',
-  password: '',
-  database: '07'
-});
+const dbConfig = require('../config/db.config.js'); // Ruta relativa
 
+const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
+  host: dbConfig.HOST,
+  dialect: dbConfig.dialect,
+  port: dbConfig.PORT,
+  pool: dbConfig.pool
+});
 const db = {};
 
 db.Sequelize = Sequelize;
